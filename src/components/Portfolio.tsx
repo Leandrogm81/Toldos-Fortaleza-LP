@@ -88,7 +88,14 @@ export default function Portfolio() {
         </div>
 
         {/* Portfolio Grids */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8" id="portfolio-grid">
+        <div 
+          className={`grid gap-8 transition-all duration-500 ${
+            filteredItems.length === 1 
+              ? 'grid-cols-1 max-w-4xl mx-auto' 
+              : 'grid-cols-1 md:grid-cols-2'
+          }`} 
+          id="portfolio-grid"
+        >
           {filteredItems.map((item) => {
             const encodedWAmg = encodeURIComponent(getCustomMessage(item.title));
             const waUrl = `https://wa.me/${whatsappPhone}?text=${encodedWAmg}`;

@@ -77,7 +77,7 @@ Por favor, entrem em contato para agendar uma vistoria técnica gratuita em minh
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
           {/* Controls - Left */}
           <div className="lg:col-span-7 bg-[#FAF9F6] rounded-3xl border border-stone-200 p-6 md:p-8 space-y-6" id="sim-controls">
             
@@ -102,7 +102,7 @@ Por favor, entrem em contato para agendar uma vistoria técnica gratuita em minh
                   </div>
                   <input
                     type="range"
-                    min="1.5"
+                    min="0.5"
                     max="10"
                     step="0.1"
                     value={state.width}
@@ -111,7 +111,7 @@ Por favor, entrem em contato para agendar uma vistoria técnica gratuita em minh
                     id="width-input"
                   />
                   <div className="flex justify-between text-[10px] text-stone-400 mt-1">
-                    <span>1.5m</span>
+                    <span>0.5m</span>
                     <span>Recomendado residencial</span>
                     <span>10.0m</span>
                   </div>
@@ -125,7 +125,7 @@ Por favor, entrem em contato para agendar uma vistoria técnica gratuita em minh
                   </div>
                   <input
                     type="range"
-                    min="1.5"
+                    min="0.5"
                     max="8"
                     step="0.1"
                     value={state.length}
@@ -134,7 +134,7 @@ Por favor, entrem em contato para agendar uma vistoria técnica gratuita em minh
                     id="length-input"
                   />
                   <div className="flex justify-between text-[10px] text-stone-400 mt-1">
-                    <span>1.5m</span>
+                    <span>0.5m</span>
                     <span>Mínimo ideal</span>
                     <span>8.0m</span>
                   </div>
@@ -257,11 +257,8 @@ Por favor, entrem em contato para agendar uma vistoria técnica gratuita em minh
 
           </div>
 
-          {/* Rendering Model & In-Person Budget - Right */}
-          <div className="lg:col-span-5 flex flex-col gap-8">
-            
-            {/* Visualizer Frame */}
-            <div className="bg-[#FAF9F6] rounded-3xl border border-stone-200 p-6 shadow-sm flex flex-col items-center justify-center relative" id="vis-frame">
+          {/* Visualizer Frame */}
+          <div className="lg:col-span-5 bg-[#FAF9F6] rounded-3xl border border-stone-200 p-6 shadow-sm flex flex-col items-center justify-center relative h-full" id="vis-frame">
               
               <div className="absolute top-4 left-4 z-10">
                 <span className="text-[10px] font-mono tracking-wider text-stone-500 uppercase bg-white py-1 px-2.5 rounded-full border border-stone-200 shadow-xs">
@@ -280,7 +277,7 @@ Por favor, entrem em contato para agendar uma vistoria técnica gratuita em minh
               </div>
 
               {/* The Interactive SVG Diagram */}
-              <div className="w-full max-w-[320px] h-[240px] flex items-center justify-center mt-6">
+              <div className="w-full max-w-[320px] h-[240px] flex items-center justify-center mt-auto mb-auto">
                 <svg viewBox="0 0 400 300" className="w-full h-full overflow-visible">
                   {/* Perspective wall baseline anchor */}
                   <line x1="50" y1="220" x2="350" y2="220" stroke="#d6d3d1" strokeWidth="2" strokeDasharray="3 3" />
@@ -402,7 +399,7 @@ Por favor, entrem em contato para agendar uma vistoria técnica gratuita em minh
               </div>
 
               {/* Guide/Legend */}
-              <div className="w-full grid grid-cols-2 gap-2 mt-4 text-[11px] text-stone-500 bg-white p-3 rounded-xl border border-stone-200">
+              <div className="w-full grid grid-cols-2 gap-2 mt-auto text-[11px] text-stone-500 bg-white p-3 rounded-xl border border-stone-200">
                 <div className="flex items-center gap-1.5">
                   <span className="w-3 h-3 rounded-full inline-block" style={{ backgroundColor: frameHexColors[state.frameColor] }}></span>
                   <span className="truncate">Estrutura: {state.frameColor}</span>
@@ -414,55 +411,59 @@ Por favor, entrem em contato para agendar uma vistoria técnica gratuita em minh
               </div>
             </div>
 
-            {/* In-Person Technical Visit Info Card */}
-            <div className="bg-stone-900 rounded-3xl p-6 md:p-8 space-y-6 shadow-sm text-white" id="quote-card">
-              <div className="flex items-center justify-between">
-                <span className="text-xs font-semibold uppercase tracking-wider text-amber-500">Orçamento Presencial</span>
-                <span className="flex items-center gap-1 text-[11px] text-stone-400">
-                  <Info size={12} /> Vistoria Sem Compromisso
-                </span>
-              </div>
-
-              <div className="space-y-2">
-                <h3 className="text-lg font-serif font-normal text-white">
-                  Orçamento Técnico Personalizado no Local
-                </h3>
-                <p className="text-stone-300 text-xs leading-relaxed">
-                  Para garantir a máxima exatidão de medidas, conformidade estrutural e o melhor preço de fábrica, realizamos a medição final e o cálculo de custos em uma vistoria presencial gratuita em toda a região de Santo André e ABC Paulista.
-                </p>
-              </div>
-
-              <div className="border-t border-stone-800 pt-4 space-y-2.5 text-xs text-stone-300">
-                <div className="flex justify-between items-center">
-                  <span>Visita & Medição Técnica no ABC:</span>
-                  <span className="text-emerald-400 font-semibold font-mono">100% GRATUITA</span>
+          {/* In-Person Technical Visit Info Card */}
+          <div className="lg:col-span-12 bg-stone-900 rounded-3xl p-6 md:p-8 shadow-sm text-white" id="quote-card">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+              <div className="space-y-6">
+                <div className="flex items-center justify-between lg:justify-start lg:gap-4">
+                  <span className="text-xs font-semibold uppercase tracking-wider text-amber-500">Orçamento Presencial</span>
+                  <span className="flex items-center gap-1 text-[11px] text-stone-400">
+                    <Info size={12} /> Vistoria Sem Compromisso
+                  </span>
                 </div>
-                <div className="flex justify-between items-center">
-                  <span>Apresentação de Amostras Físicas:</span>
-                  <span className="text-white font-semibold">Sim (Cores & Chapas)</span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span>Garantia de Vedação e Instalação:</span>
-                  <span className="text-white font-semibold">1 Ano Integral</span>
+                <div className="space-y-2">
+                  <h3 className="text-lg md:text-2xl font-serif font-normal text-white">
+                    Orçamento Técnico Personalizado no Local
+                  </h3>
+                  <p className="text-stone-300 text-xs md:text-sm leading-relaxed">
+                    Para garantir a máxima exatidão de medidas, conformidade estrutural e o melhor preço de fábrica, realizamos a medição final e o cálculo de custos em uma vistoria presencial gratuita em toda a região de Santo André e ABC Paulista.
+                  </p>
                 </div>
               </div>
 
-              {/* CTA Link to WhatsApp */}
-              <a
-                href={getWhatsAppLink()}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-2 w-full bg-[#25D366] hover:bg-[#20ba59] text-white font-bold py-3.5 px-6 rounded-2xl flex items-center justify-center gap-3 transition-all transform hover:translate-y-[-1px] tracking-wide shadow-md cursor-pointer"
-                id="sim-whatsapp-cta"
-              >
-                <Phone size={18} /> Agendar Vistoria sob Medida <ArrowRight size={16} />
-              </a>
+              <div className="space-y-6">
+                <div className="border-t lg:border-t-0 lg:border-l border-stone-800 pt-4 lg:pt-0 lg:pl-8 space-y-2.5 text-xs md:text-sm text-stone-300">
+                  <div className="flex justify-between items-center">
+                    <span>Visita & Medição Técnica no ABC:</span>
+                    <span className="text-emerald-400 font-semibold font-mono">100% GRATUITA</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span>Apresentação de Amostras Físicas:</span>
+                    <span className="text-white font-semibold">Sim (Cores & Chapas)</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span>Garantia de Vedação e Instalação:</span>
+                    <span className="text-white font-semibold">1 Ano Integral</span>
+                  </div>
+                </div>
 
-              <p className="text-[10px] text-center text-stone-400">
-                Ao clicar, você enviará as escolhas de material e medidas do simulador diretamente aos nossos projetistas para agilizar o atendimento.
-              </p>
+                {/* CTA Link to WhatsApp */}
+                <div className="lg:pl-8">
+                  <a
+                    href={getWhatsAppLink()}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full bg-[#25D366] hover:bg-[#20ba59] text-white font-bold py-3.5 px-6 rounded-2xl flex items-center justify-center gap-3 transition-all transform hover:translate-y-[-1px] tracking-wide shadow-md cursor-pointer"
+                    id="sim-whatsapp-cta"
+                  >
+                    <Phone size={18} /> Agendar Vistoria sob Medida <ArrowRight size={16} />
+                  </a>
+                  <p className="text-[10px] text-center text-stone-400 mt-3">
+                    Ao clicar, você enviará as escolhas de material e medidas do simulador diretamente aos nossos projetistas para agilizar o atendimento.
+                  </p>
+                </div>
+              </div>
             </div>
-
           </div>
         </div>
       </div>

@@ -112,21 +112,33 @@ export default function BeforeAfter() {
               <div className="flex gap-2">
                 <button 
                   onClick={() => setSliderPosition(100)} 
-                  className="px-3 py-1 bg-stone-250 hover:bg-stone-300 text-stone-850 rounded-lg text-[11px] font-bold transition-colors cursor-pointer"
+                  className={`px-3 py-1 rounded-lg text-[11px] font-bold transition-colors cursor-pointer ${
+                    sliderPosition === 100 
+                      ? 'bg-stone-900 text-white' 
+                      : 'bg-stone-100 hover:bg-stone-200 text-stone-600'
+                  }`}
                   id="btn-show-before"
                 >
                   Ver Antes
                 </button>
                 <button 
                   onClick={() => setSliderPosition(0)} 
-                  className="px-3 py-1 bg-stone-900 hover:bg-stone-800 text-white rounded-lg text-[11px] font-bold transition-colors cursor-pointer"
+                  className={`px-3 py-1 rounded-lg text-[11px] font-bold transition-colors cursor-pointer ${
+                    sliderPosition === 0 
+                      ? 'bg-stone-900 text-white' 
+                      : 'bg-stone-100 hover:bg-stone-200 text-stone-600'
+                  }`}
                   id="btn-show-after"
                 >
                   Ver Depois
                 </button>
                 <button 
                   onClick={() => setSliderPosition(50)} 
-                  className="px-3 py-1 bg-stone-100 hover:bg-stone-200 text-stone-600 rounded-lg text-[11px] transition-colors cursor-pointer"
+                  className={`px-3 py-1 rounded-lg text-[11px] font-bold transition-colors cursor-pointer ${
+                    sliderPosition !== 0 && sliderPosition !== 100 
+                      ? 'bg-stone-900 text-white' 
+                      : 'bg-stone-100 hover:bg-stone-200 text-stone-600'
+                  }`}
                   id="btn-reset-slider"
                 >
                   Meio a Meio

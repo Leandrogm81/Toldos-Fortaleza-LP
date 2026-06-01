@@ -12,8 +12,8 @@ export default function FAQ() {
   const faqItems: FAQItem[] = [
     {
       id: 1,
-      question: 'A vistoria técnica e medição em Santo André e ABC é cobrada?',
-      answer: 'Não! Nossa visita técnica de medição e análise estrutural é 100% gratuita para todas as cidades do ABC Paulista (Santo André, São Bernardo do Campo, São Caetano do Sul, Diadema, Mauá, etc.). Nossos projetistas vão até o local sem compromisso.'
+      question: 'Como funciona a visita técnica e medição em Santo André e região do ABC?',
+      answer: 'Primeiro fazemos uma avaliação inicial pelo WhatsApp, com base nas medidas, fotos e informações do local. Assim conseguimos antecipar uma estimativa de orçamento de forma rápida e prática.\n\nQuando o cliente tem interesse em seguir com o projeto, agendamos a visita técnica para conferência das medidas, análise do local e definição dos detalhes da instalação.\n\nEm casos de visitas apenas para cotação presencial, a disponibilidade e as condições são informadas previamente pelo atendimento.'
     },
     {
       id: 2,
@@ -84,7 +84,7 @@ export default function FAQ() {
                 
                 {/* Accordion detail pane */}
                 {isOpen && (
-                  <div className="px-6 pb-6 text-xs md:text-sm text-stone-600 leading-relaxed text-wrap font-normal border-t border-stone-100 pt-3 font-sans">
+                  <div className="px-6 pb-6 text-xs md:text-sm text-stone-600 leading-relaxed text-wrap whitespace-pre-line font-normal border-t border-stone-100 pt-3 font-sans">
                     {item.answer}
                   </div>
                 )}
