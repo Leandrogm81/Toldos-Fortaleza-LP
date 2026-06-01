@@ -28,7 +28,7 @@ export default function Hero() {
  
             {/* Headline using the serif font family for that 'Natural Tones' organic, high-end feel */}
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif font-normal tracking-tight text-stone-900 leading-tight">
-              A elegância da luz natural com <span className="italic font-light text-stone-700 block mt-1">Coberturas Retráteis Premium</span>
+              A elegância da luz natural com <span className="italic font-light text-stone-700">Coberturas Retráteis Premium</span>
             </h1>
 
             {/* Description */}
