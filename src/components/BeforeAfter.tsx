@@ -1,6 +1,10 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { motion } from 'motion/react';
 import { Eye, Layers, Sparkles, CheckCircle2 } from 'lucide-react';
+// @ts-expect-error - dynamic generated image from runtime upload
+import beforeImage from '../assets/images/regenerated_image_1780340306237.jpg';
+// @ts-expect-error - dynamic generated image from runtime upload
+import afterImage from '../assets/images/after_image.jpg';
 
 export default function BeforeAfter() {
   const [sliderPosition, setSliderPosition] = useState(50);
@@ -61,7 +65,7 @@ export default function BeforeAfter() {
               {/* After Product (Full width in background) */}
               <div className="absolute inset-0 w-full h-full">
                 <img 
-                  src="https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&w=1200&q=80" 
+                  src={afterImage} 
                   alt="Depois: Varanda com cobertura de policarbonato"
                   className="w-full h-full object-cover"
                   referrerPolicy="no-referrer"
@@ -77,14 +81,14 @@ export default function BeforeAfter() {
                 style={{ width: `${sliderPosition}%` }}
               >
                 <img 
-                  src="https://images.unsplash.com/photo-1541123437800-1bb1317badc2?auto=format&fit=crop&w=1200&q=80" 
+                  src={beforeImage} 
                   alt="Antes: Área aberta desprotegida"
                   className="absolute inset-y-0 left-0 w-full h-full object-cover max-w-none"
                   style={{ width: containerRef.current?.getBoundingClientRect().width }}
                   referrerPolicy="no-referrer"
                 />
                 <div className="absolute bottom-4 left-4 bg-stone-900/90 text-white font-bold text-xs px-4 py-1.5 rounded-lg shadow-sm uppercase tracking-wider backdrop-blur-xs z-10 whitespace-nowrap">
-                  ANTES (Espaço Ocioso em Dias de Chuva)
+                  ANTES (Churrasqueira Descoberta)
                 </div>
               </div>
 

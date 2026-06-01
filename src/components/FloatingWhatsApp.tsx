@@ -14,7 +14,7 @@ export default function FloatingWhatsApp() {
   }, []);
 
   const whatsappPhone = '551120360010'; // Santo André DDD 11 placeholder
-  const message = 'Olá! Estava navegando na página da Toldos Santo André e gostaria de tirar dúvidas sobre a cobertura retrátil de policarbonato.';
+  const message = 'Olá! Estava navegando na página da Toldos Fortaleza e gostaria de tirar dúvidas sobre a cobertura retrátil de policarbonato.';
   const encodedMessage = encodeURIComponent(message);
   const whatsappUrl = `https://wa.me/${whatsappPhone}?text=${encodedMessage}`;
 
@@ -49,7 +49,7 @@ export default function FloatingWhatsApp() {
               </div>
             </div>
             <p className="text-xs text-stone-600 mt-2 leading-relaxed">
-              Faça sua simulação ou tire suas dúvidas sobre prazos e instalação em Santo André.
+              Faça sua simulação ou tire suas dúvidas sobre prazos e instalação no ABC.
             </p>
             <a
               href={whatsappUrl}

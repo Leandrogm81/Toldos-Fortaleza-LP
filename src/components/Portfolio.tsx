@@ -50,7 +50,7 @@ export default function Portfolio() {
 
   const whatsappPhone = '551120360010';
   const getCustomMessage = (title: string) => {
-    return `Olá! Vi o projeto "${title}" na galeria de Toldos Santo André e gostaria de planejar um sistema retrátil similar para minha residência.`;
+    return `Olá! Vi o projeto "${title}" na galeria da Toldos Fortaleza e gostaria de planejar um sistema retrátil similar para minha residência.`;
   };
 
   return (
@@ -63,7 +63,7 @@ export default function Portfolio() {
             <Camera size={12} className="text-stone-500" /> Nosso Portfólio ABC
           </span>
           <h2 className="text-3xl md:text-5xl font-serif font-normal text-stone-900 tracking-tight">
-            Projetos Executados com Orgulho
+            Projetos Executados
           </h2>
           <p className="text-stone-600 mt-4 text-sm md:text-base leading-relaxed font-sans">
             Navegue pelos nossos projetos recentes de coberturas em casas e condomínios no Grande ABC. Excelência estrutural, parafusos invisíveis e vedação garantida contra vazamentos.
