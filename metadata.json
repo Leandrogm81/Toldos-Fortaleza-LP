@@ -1,0 +1,6 @@
+{
+  "name": "Toldos Santo André",
+  "description": "Landing page profissional de coberturas retráteis de policarbonato em Santo André e região do ABC.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
