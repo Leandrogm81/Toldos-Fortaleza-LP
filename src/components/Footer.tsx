@@ -11,7 +11,7 @@ export default function Footer() {
     'Diadema',
     'Mauá',
     'Ribeirão Pires',
-    'Grande São Paulo'
+    'São Paulo'
   ];
 
   return (
@@ -55,7 +55,15 @@ export default function Footer() {
             <ul className="space-y-3 text-xs md:text-sm text-stone-300 font-sans">
               <li className="flex items-start gap-2">
                 <MapPin size={18} className="text-stone-400 shrink-0 mt-0.5" />
-                <span>Av. Araucária 997, Pq. Oratório, Santo André - SP</span>
+                <a 
+                  id="footer-address-link"
+                  href="https://maps.app.goo.gl/77ZFR5PSyNkwXGAG9" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="hover:text-white transition-colors"
+                >
+                  Av. Araucária 997, Pq. Oratório, Santo André - SP
+                </a>
               </li>
               <li className="flex items-center gap-2">
                 <Phone size={18} className="text-stone-400 shrink-0" />
