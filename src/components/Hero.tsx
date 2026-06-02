@@ -100,10 +100,9 @@ export default function Hero() {
             {/* Top illustrative floating card */}
             <div className="relative rounded-3xl overflow-hidden shadow-lg border border-stone-200 bg-white transform hover:scale-[1.01] transition-transform duration-300">
               <img 
-                src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" 
-                alt="Exemplo de Cobertura Retrátil em Santo André" 
+                src="/images/cobertura-fixa.jpg" 
+                alt="Exemplo de Cobertura Fixa em Santo André" 
                 className="w-full aspect-[4/3] object-cover"
-                referrerPolicy="no-referrer"
               />
               
               <div className="p-5 space-y-3">
@@ -115,17 +114,14 @@ export default function Hero() {
                 </div>
                 
                 <h3 className="text-base font-serif font-semibold text-stone-900 leading-snug">
-                  Área externa protegida com abertura automática silenciosa
+                  Área externa protegida com Cobertura Fixa elegante
                 </h3>
                 
                 <p className="text-xs text-stone-600 leading-relaxed">
-                  Perfeita simbiose de luz solar e proteção térmica. Trilhos de alumínio anodizado bronze e roldanas de latão naval anti-ruído de alta longevidade.
+                  Perfeita simbiose de luz solar e proteção térmica.
                 </p>
 
-                <div className="flex items-center justify-between pt-1 text-xs font-medium text-stone-700">
-                  <span>Operabilidade:</span>
-                  <span className="text-stone-900 font-bold bg-stone-50 border border-stone-200 px-2 py-0.5 rounded-md">Retrátil & Fixa</span>
-                </div>
+
               </div>
             </div>
 

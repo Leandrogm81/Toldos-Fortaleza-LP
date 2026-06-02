@@ -8,17 +8,17 @@ export default function Portfolio() {
   const portfolioItems: PortfolioItem[] = [
     {
       id: 1,
-      title: 'Espaço Gourmet Santo André',
+      title: 'Terraço Gourmet em Santo André',
       category: 'gourmet',
-      imageUrl: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=700&q=80',
-      description: 'Cobertura retrátil de policarbonato compacto transparente (visual vidro) com estrutura preta anodizada integrado ao espaço da churrasqueira.'
+      imageUrl: '/images/terraco-gourmet.jpg',
+      description: 'Cobertura retrátil de policarbonato alveolar branco leitoso com estrutura de alumínio na cor branca integrado ao espaço da churrasqueira.'
     },
     {
       id: 2,
       title: 'Garagem Residencial São Bernardo',
       category: 'garagem',
-      imageUrl: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=700&q=80',
-      description: 'Estrutura robusta em console de alumínio preto com policarbonato compacto fumê, garantindo alta proteção solar para 2 veículos.'
+      imageUrl: '/images/garagem-azul.jpg',
+      description: 'Estrutura robusta de alumínio com pintura preta e policarbonato compacto azul, garantindo alta proteção solar para 2 veículos.'
     },
     {
       id: 3,
