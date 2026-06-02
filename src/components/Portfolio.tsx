@@ -3,7 +3,7 @@ import { Camera, CheckCircle, ExternalLink, Image as ImageIcon } from 'lucide-re
 import { PortfolioItem } from '../types';
 
 export default function Portfolio() {
-  const [activeFilter, setActiveFilter] = useState<'all' | 'gourmet' | 'garagem' | 'piscina' | 'corredor'>('all');
+  const [activeFilter, setActiveFilter] = useState<'all' | 'gourmet' | 'garagem' | 'area-servico' | 'corredor'>('all');
 
   const portfolioItems: PortfolioItem[] = [
     {
@@ -22,17 +22,17 @@ export default function Portfolio() {
     },
     {
       id: 3,
-      title: 'Cobertura de Piscina Diadema',
-      category: 'piscina',
-      imageUrl: 'https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&w=700&q=80',
-      description: 'Sistema automatizado com motor tubular silencioso. O teto em policarbonato compacto cristal abre em 3 seções, liberando sol pleno.'
+      title: 'Cobertura Retrátil em apartamento sem condomínio',
+      category: 'area-servico',
+      imageUrl: '/images/apartamento.jpg',
+      description: 'Sistema abre e fecha com trilhos e estrutura em alumínio com pintura branca, policarbonato alveolar cristal e fechamento fixo lateral.'
     },
     {
       id: 4,
-      title: 'Corredor Lateral São Caetano',
+      title: 'Corredor Lateral de Sobrado em São Caetano',
       category: 'corredor',
-      imageUrl: 'https://images.unsplash.com/photo-1541123437800-1bb1317badc2?auto=format&fit=crop&w=700&q=80',
-      description: 'Policarbonato alveolar branco leitoso de 10mm em montantes de alumínio branco. Permite a passagem de luz agradável isolando vizinhos.'
+      imageUrl: '/images/corredor.jpg',
+      description: 'Cobertura retrátil em policarbonato compacto bronze com estrutura em alumínio preto. Solução moderna e elegante para corredores laterais, permitindo entrada de luz natural com proteção contra chuva e maior conforto visual.'
     }
   ];
 
@@ -44,7 +44,7 @@ export default function Portfolio() {
     { label: 'Todos os Projetos', value: 'all' },
     { label: 'Área Gourmet', value: 'gourmet' },
     { label: 'Garagens', value: 'garagem' },
-    { label: 'Áreas de Lazer e Piscina', value: 'piscina' },
+    { label: 'Área de Serviço', value: 'area-servico' },
     { label: 'Corredores Integrados', value: 'corredor' }
   ] as const;
 
@@ -114,7 +114,7 @@ export default function Portfolio() {
                     referrerPolicy="no-referrer"
                   />
                   <div className="absolute top-4 left-4 bg-stone-900/90 backdrop-blur-xs text-white font-serif text-[10px] font-normal py-1 px-3 rounded-full uppercase tracking-wider">
-                    {item.category === 'gourmet' ? 'Gourmet' : item.category === 'garagem' ? 'Garagem' : item.category === 'piscina' ? 'Piscina/Lazer' : 'Corredor'}
+                    {item.category === 'gourmet' ? 'Gourmet' : item.category === 'garagem' ? 'Garagem' : item.category === 'area-servico' ? 'Área de Serviço' : 'Corredor'}
                   </div>
                 </div>
 
